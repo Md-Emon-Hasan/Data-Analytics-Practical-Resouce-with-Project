@@ -1,128 +1,100 @@
-# Data Analytics Project
+# Data Analytics Practical Resource with Projects
 
-Welcome to the **Data Analytics Project** repository! This repository showcases a collection of data analytics projects focusing on various domains and techniques. It includes practical examples, analyses, and visualizations using Python and relevant libraries.
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Analysis-013243?logo=numpy&logoColor=white)](https://numpy.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-## 📋 Contents
+A hands-on collection of Python data analytics study materials, Jupyter notebooks, datasets, SQL examples, web scraping practice, and guided analysis projects. Work through individual topics or use the project notebooks to practice cleaning, exploring, summarizing, and visualizing real-world datasets.
 
-- [Introduction](#introduction)
-- [Key Techniques](#key-techniques)
-- [Getting Started](#getting-started)
+## Contents
+
+- [Data analytics projects](#data-analytics-projects)
+- [Learning materials](#learning-materials)
+- [Getting started](#getting-started)
+- [Working with the MySQL examples](#working-with-the-mysql-examples)
+- [Repository structure](#repository-structure)
 - [Contributing](#contributing)
-- [Challenges Faced](#challenges-faced)
-- [Lessons Learned](#lessons-learned)
-- [Why I Created This Repository](#why-i-created-this-repository)
 - [License](#license)
 - [Contact](#contact)
 
----
+## Data analytics projects
 
-## 📖 Introduction
+Each project folder contains a Jupyter notebook and its accompanying CSV dataset. The notebooks are question-led exercises in data preparation, filtering, aggregation, and analysis.
 
-This repository serves as a portfolio of data analytics projects covering a range of topics and industries. Each project provides insights into data manipulation, exploratory data analysis (EDA), statistical analysis, machine learning (if applicable), and visualization techniques.
+| Project | Topics covered | Notebook |
+| --- | --- | --- |
+| Weather dataset | Missing values, conditions, filtering, descriptive statistics, and grouping | [Open notebook](<Data Analytics Project/Project - 1 Weather Dataset/Weather Dataset.ipynb>) |
+| Cars dataset | Exploring vehicle makes and origins, filtering records, and updating values | [Open notebook](<Data Analytics Project/Project - 2 Cars Dataset/Project - 2 Cars Dataset.ipynb>) |
+| Police dataset | Missing data, stop patterns, searches, duration, and age distributions | [Open notebook](<Data Analytics Project/Project - 3 Police Dataset/Police Dataset.ipynb>) |
+| COVID-19 dataset | Regional case counts, filtering, sorting, and India-focused queries | [Open notebook](<Data Analytics Project/Project - 4 Covid-19 Dataset/Covid-19 Dataset.ipynb>) |
+| London housing data | Date handling, area and year summaries, house prices, and crime records | [Open notebook](<Data Analytics Project/Project - 5 London Housing Data/London Housing Data.ipynb>) |
+| India Census 2011 | District lookups, population and religion summaries, and DataFrame styling | [Open notebook](<Data Analytics Project/Project - 6 Census Dataset/Census Dataset.ipynb>) |
 
----
+## Learning materials
 
-## 🔑 Key Techniques
+- **NumPy, Pandas, Matplotlib, and Seaborn** — notebooks and sample datasets for numerical arrays, DataFrames, and charting. Browse the [NumPy](<Numpy, Pandas, Matplotlib, Seaborn/Numpy/numpy.ipynb>), [Pandas](<Numpy, Pandas, Matplotlib, Seaborn/Pandas/Pandas.ipynb>), [Matplotlib](<Numpy, Pandas, Matplotlib, Seaborn/Matplotlib/Matplotlib.ipynb>), and [Seaborn](<Numpy, Pandas, Matplotlib, Seaborn/Seaborn/Seaborn.ipynb>) notebooks.
+- **Python with MySQL** — short scripts illustrating database connections, table creation, CRUD operations, filters, joins, and aggregate queries. See the [`Python with MySQL`](<Python with MySQL/>) folder.
+- **Web scraping with Python and BeautifulSoup** — a notebook introducing HTTP requests, HTML parsing, and BeautifulSoup. [Open the tutorial](<Web Scraping Tutorial using Python and BeautifulSoup/Web Scraping Tutorial using Python and BeautifulSoup.ipynb>).
 
-- **Data Cleaning:** Techniques for handling missing data, outliers, and inconsistencies.
-- **Exploratory Data Analysis (EDA):** Methods to summarize main characteristics of the data.
-- **Statistical Analysis:** Application of statistical tests and measures to uncover patterns and insights.
-- **Machine Learning:** Utilization of machine learning models for prediction and classification tasks (if applicable).
-- **Data Visualization:** Creating visual representations of data using charts, graphs, and plots.
+## Getting started
 
----
-
-## 🚀 Getting Started
-
-To explore the projects in this repository, follow these steps:
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/Md-Emon-Hasan/Data_Analytics_Project.git
-   ```
-
-2. **Navigate to the project directory:**
+1. Clone the repository:
 
    ```bash
-   cd Data_Analytics_Project
+   git clone https://github.com/Md-Emon-Hasan/Data-Analytics-Practical-Resouce-with-Project.git
+   cd Data-Analytics-Practical-Resouce-with-Project
    ```
 
-3. **Explore individual project folders:**
-
-   - Each project folder contains its own README and code files.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can contribute to this repository:
-
-1. **Fork the repository.**
-2. **Create a new branch:**
+2. (Optional) Create and activate a virtual environment:
 
    ```bash
-   git checkout -b feature/new-feature
+   python -m venv .venv
+   # Windows PowerShell
+   .venv\Scripts\Activate.ps1
+   # macOS / Linux
+   source .venv/bin/activate
    ```
 
-3. **Make your changes:**
-
-   - Add new projects, improve documentation, or optimize code.
-
-4. **Commit your changes:**
+3. Install the common libraries used by the notebooks and examples:
 
    ```bash
-   git commit -am 'Add a new project or update'
+   python -m pip install jupyter numpy pandas matplotlib seaborn requests beautifulsoup4 html5lib openpyxl pymysql
    ```
 
-5. **Push to the branch:**
+4. Start Jupyter and open a notebook:
 
    ```bash
-   git push origin feature/new-feature
+   jupyter notebook
    ```
 
-6. **Submit a pull request.**
+Run a notebook from its own project folder so its relative dataset paths resolve correctly. The MySQL scripts also require a running MySQL server and a database connection configured for your environment. The notebooks are independent; install any additional package requested by a particular notebook if needed.
 
----
+## Working with the MySQL examples
 
-## 🛠️ Challenges Faced
+The scripts demonstrate basic SQL operations through PyMySQL. Before running them, install and start MySQL, create/configure the required database and tables, and update the connection settings in the scripts to match your local credentials. Do not put real passwords in files you plan to share.
 
-Throughout the development of this repository, challenges were encountered, including:
+## Repository structure
 
-- Data cleaning and preprocessing complexities.
-- Choosing appropriate visualization techniques for different datasets.
-- Implementing and fine-tuning machine learning models (if applicable).
+```text
+Data-Analytics-Practical-Resouce-with-Project/
+├── Data Analytics Project/                         # Six dataset analysis projects
+├── Numpy, Pandas, Matplotlib, Seaborn/             # Library notebooks and sample data
+├── Python with MySQL/                              # SQL connection and query examples
+├── Web Scraping Tutorial using Python and BeautifulSoup/
+├── LICENSE
+└── README.md
+```
 
----
+## Contributing
 
-## 📚 Lessons Learned
+Suggestions and improvements are welcome. Open an issue to discuss a change, or submit a pull request with a clear description of what you added or fixed.
 
-Key lessons learned from developing this repository include:
+## License
 
-- Improved proficiency in data manipulation and analysis techniques.
-- Enhanced understanding of statistical methods and machine learning algorithms.
-- Importance of clear project documentation and reproducibility.
+This repository is distributed under the [Apache License 2.0](LICENSE).
 
----
+## Contact
 
-## 🌟 Why I Created This Repository
-
-I created this repository to showcase my skills in data analytics and provide a resource for others interested in exploring real-world data projects. Each project demonstrates practical applications of data science techniques and serves as a learning tool for aspiring data analysts and scientists.
-
----
-
-## 📜 License
-
-This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## 📬 Contact
-
-- **Email:** [iconicemon01@gmail.com](mailto:iconicemon01@gmail.com)
-- **WhatsApp:** [+8801834363533](https://wa.me/8801834363533)
-- **GitHub:** [Md-Emon-Hasan](https://github.com/Md-Emon-Hasan)
-- **LinkedIn:** [Md Emon Hasan](https://www.linkedin.com/in/md-emon-hasan)
-- **Facebook:** [Md Emon Hasan](https://www.facebook.com/mdemon.hasan2001/)
-
-Feel free to reach out for any questions, feedback, or collaboration opportunities!
+**Emon** | [Email](mailto:emon.mlengineer@gmail.com) | [LinkedIn](https://www.linkedin.com/in/md-emon-hasan) | [GitHub](https://github.com/Md-Emon-Hasan)
